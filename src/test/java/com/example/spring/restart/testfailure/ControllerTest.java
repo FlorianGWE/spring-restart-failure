@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT //
+        , properties = { "spring.jmx.enabled=true" } // needed for enabling RestartEndpoint (per default of in test)
 )
 public class ControllerTest {
     @Autowired
